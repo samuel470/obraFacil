@@ -1,0 +1,13 @@
+create table usuarios (id uuid primary key, nome varchar(255), email varchar(255) unique, senha_hash varchar(255), role varchar(30), plan varchar(30), avatar_url varchar(500), created_at timestamp);
+create table projects (id uuid primary key, nome varchar(255), endereco varchar(255), status varchar(30), client_id uuid, responsible_id uuid, progresso int, orcamento_total numeric(14,2), criado_em timestamp);
+create table stages (id uuid primary key, project_id uuid, nome varchar(255), progresso int, concluido boolean, ordem int);
+create table checklist_items (id uuid primary key, etapa_id uuid, rotulo varchar(255), concluido boolean);
+create table diaries (id uuid primary key, project_id uuid, data date, descricao text, clima varchar(100), ocorrencias varchar(255), created_at timestamp, idempotency_key varchar(255));
+create table diary_photos (id uuid primary key, diario_id uuid, url varchar(500), categoria varchar(100), created_at timestamp);
+create table nonconformities (id uuid primary key, project_id uuid, titulo varchar(255), descricao text, status varchar(30), gravidade varchar(20), data date);
+create table payments (id uuid primary key, project_id uuid, descricao varchar(255), categoria varchar(100), valor numeric(14,2), data_vencimento date, status varchar(30));
+create table documents (id uuid primary key, project_id uuid, nome varchar(255), tipo varchar(30), url varchar(500), data date);
+create table messages (id uuid primary key, project_id uuid, sender_id uuid, text text, timestamp timestamp, is_decision boolean, idempotency_key varchar(255));
+create table notifications (id uuid primary key, user_id uuid, tipo varchar(100), titulo varchar(255), corpo text, lido boolean, data timestamp);
+create table refresh_tokens (id uuid primary key, user_id uuid, token text, expires_at timestamp, revoked boolean);
+create table ai_usage (id uuid primary key, user_id uuid, month_ref varchar(7), used_count int);
