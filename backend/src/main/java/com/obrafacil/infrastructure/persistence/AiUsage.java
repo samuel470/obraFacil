@@ -9,5 +9,9 @@ import com.obrafacil.domain.enums.*;
 @Entity
 @Table(name="ai_usage")
 public class AiUsage {
-  @Id public UUID id; UUID userId; String monthRef; Integer usedCount;
+  @Id
+  public UUID id;
+  public UUID userId;
+  public String monthRef;
+  public Integer usedCount;
 }

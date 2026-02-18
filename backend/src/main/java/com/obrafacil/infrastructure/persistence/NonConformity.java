@@ -9,5 +9,15 @@ import com.obrafacil.domain.enums.*;
 @Entity
 @Table(name="nonconformities")
 public class NonConformity {
-  @Id public UUID id; UUID projectId; String titulo; @Column(length=3000) String descricao; @Enumerated(EnumType.STRING) RncStatus status; @Enumerated(EnumType.STRING) Severity gravidade; LocalDate data;
+  @Id
+  public UUID id;
+  public UUID projectId;
+  public String titulo;
+  @Column(length=3000)
+  public String descricao;
+  @Enumerated(EnumType.STRING)
+  public RncStatus status;
+  @Enumerated(EnumType.STRING)
+  public Severity gravidade;
+  public LocalDate data;
 }

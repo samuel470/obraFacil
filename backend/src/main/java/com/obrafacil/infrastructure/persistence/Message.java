@@ -9,5 +9,13 @@ import com.obrafacil.domain.enums.*;
 @Entity
 @Table(name="messages")
 public class Message {
-  @Id public UUID id; UUID projectId; UUID senderId; @Column(length=2000) String text; Instant timestamp; Boolean isDecision; String idempotencyKey;
+  @Id
+  public UUID id;
+  public UUID projectId;
+  public UUID senderId;
+  @Column(length=2000)
+  public String text;
+  public Instant timestamp;
+  public Boolean isDecision;
+  public String idempotencyKey;
 }

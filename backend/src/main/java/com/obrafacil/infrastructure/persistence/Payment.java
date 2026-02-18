@@ -9,5 +9,13 @@ import com.obrafacil.domain.enums.*;
 @Entity
 @Table(name="payments")
 public class Payment {
-  @Id public UUID id; UUID projectId; String descricao; String categoria; BigDecimal valor; LocalDate dataVencimento; @Enumerated(EnumType.STRING) PaymentStatus status;
+  @Id
+  public UUID id;
+  public UUID projectId;
+  public String descricao;
+  public String categoria;
+  public BigDecimal valor;
+  public LocalDate dataVencimento;
+  @Enumerated(EnumType.STRING)
+  public PaymentStatus status;
 }

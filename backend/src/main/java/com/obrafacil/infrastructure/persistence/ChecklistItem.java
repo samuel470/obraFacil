@@ -9,5 +9,9 @@ import com.obrafacil.domain.enums.*;
 @Entity
 @Table(name="checklist_items")
 public class ChecklistItem {
-  @Id public UUID id; UUID etapaId; String rotulo; Boolean concluido;
+  @Id
+  public UUID id;
+  public UUID etapaId;
+  public String rotulo;
+  public Boolean concluido;
 }

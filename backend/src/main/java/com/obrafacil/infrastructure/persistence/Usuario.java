@@ -9,5 +9,16 @@ import com.obrafacil.domain.enums.*;
 @Entity
 @Table(name="usuarios")
 public class Usuario {
-  @Id public UUID id; String nome; @Column(unique=true) String email; String senhaHash; @Enumerated(EnumType.STRING) Role role; @Enumerated(EnumType.STRING) Plan plan; String avatarUrl; Instant createdAt;
+  @Id
+  public UUID id;
+  public String nome;
+  @Column(unique=true)
+  public String email;
+  public String senhaHash;
+  @Enumerated(EnumType.STRING)
+  public Role role;
+  @Enumerated(EnumType.STRING)
+  public Plan plan;
+  public String avatarUrl;
+  public Instant createdAt;
 }

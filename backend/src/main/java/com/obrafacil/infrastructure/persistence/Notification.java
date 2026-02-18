@@ -9,5 +9,12 @@ import com.obrafacil.domain.enums.*;
 @Entity
 @Table(name="notifications")
 public class Notification {
-  @Id public UUID id; UUID userId; String tipo; String titulo; String corpo; Boolean lido; Instant data;
+  @Id
+  public UUID id;
+  public UUID userId;
+  public String tipo;
+  public String titulo;
+  public String corpo;
+  public Boolean lido;
+  public Instant data;
 }

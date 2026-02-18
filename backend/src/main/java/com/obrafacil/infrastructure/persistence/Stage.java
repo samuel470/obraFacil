@@ -9,5 +9,11 @@ import com.obrafacil.domain.enums.*;
 @Entity
 @Table(name="stages")
 public class Stage {
-  @Id public UUID id; UUID projectId; String nome; Integer progresso; Boolean concluido; Integer ordem;
+  @Id
+  public UUID id;
+  public UUID projectId;
+  public String nome;
+  public Integer progresso;
+  public Boolean concluido;
+  public Integer ordem;
 }

@@ -9,5 +9,12 @@ import com.obrafacil.domain.enums.*;
 @Entity
 @Table(name="documents")
 public class Document {
-  @Id public UUID id; UUID projectId; String nome; @Enumerated(EnumType.STRING) DocType tipo; String url; LocalDate data;
+  @Id
+  public UUID id;
+  public UUID projectId;
+  public String nome;
+  @Enumerated(EnumType.STRING)
+  public DocType tipo;
+  public String url;
+  public LocalDate data;
 }

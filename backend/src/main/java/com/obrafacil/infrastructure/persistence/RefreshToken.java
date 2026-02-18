@@ -9,5 +9,10 @@ import com.obrafacil.domain.enums.*;
 @Entity
 @Table(name="refresh_tokens")
 public class RefreshToken {
-  @Id public UUID id; UUID userId; String token; Instant expiresAt; Boolean revoked;
+  @Id
+  public UUID id;
+  public UUID userId;
+  public String token;
+  public Instant expiresAt;
+  public Boolean revoked;
 }

@@ -9,5 +9,14 @@ import com.obrafacil.domain.enums.*;
 @Entity
 @Table(name="diaries")
 public class Diary {
-  @Id public UUID id; UUID projectId; LocalDate data; @Column(length=3000) String descricao; String clima; String ocorrencias; Instant createdAt; String idempotencyKey;
+  @Id
+  public UUID id;
+  public UUID projectId;
+  public LocalDate data;
+  @Column(length=3000)
+  public String descricao;
+  public String clima;
+  public String ocorrencias;
+  public Instant createdAt;
+  public String idempotencyKey;
 }

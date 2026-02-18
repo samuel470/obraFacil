@@ -9,5 +9,10 @@ import com.obrafacil.domain.enums.*;
 @Entity
 @Table(name="diary_photos")
 public class DiaryPhoto {
-  @Id public UUID id; UUID diarioId; String url; String categoria; Instant createdAt;
+  @Id
+  public UUID id;
+  public UUID diarioId;
+  public String url;
+  public String categoria;
+  public Instant createdAt;
 }
