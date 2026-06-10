@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/obrafacil
+    username: obrafacil
+    password: obrafacil
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+logging:
+  pattern:
+    level: "%5p [cid:%X{correlationId}]"
+app:
+  jwt:
+    secret: "1234567890123456789012345678901234567890123456789012345678901234"
+  gemini:
+    key: ${GEMINI_API_KEY:}
