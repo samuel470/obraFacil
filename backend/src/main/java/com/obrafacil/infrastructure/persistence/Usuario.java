@@ -14,6 +14,7 @@ public class Usuario {
   public String nome;
   @Column(unique=true)
   public String email;
+  @com.fasterxml.jackson.annotation.JsonIgnore
   public String senhaHash;
   @Enumerated(EnumType.STRING)
   public Role role;

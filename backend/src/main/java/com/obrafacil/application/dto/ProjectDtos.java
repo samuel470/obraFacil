@@ -16,4 +16,6 @@ public class ProjectDtos {
   public record PaymentRequest(@NotBlank String descricao, String categoria, @NotNull BigDecimal valor, @NotNull LocalDate dataVencimento, @NotNull PaymentStatus status) {}
   public record DocumentRequest(@NotBlank String nome, @NotNull DocType tipo, @NotBlank String url, @NotNull LocalDate data) {}
   public record MessageRequest(@NotBlank String text, Boolean isDecision, String idempotencyKey, String clientGeneratedId) {}
+  public record ChecklistItemRequest(@NotBlank String rotulo) {}
+  public record ProfileUpdateRequest(String nome, String avatarUrl) {}
 }
